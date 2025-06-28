@@ -20,7 +20,7 @@
 
 正如您所指出的，Agent 之间的协同，本质上是更高效、更稳定的 API 暴露与调用。ANAS 正是实现这一目标的核心基础设施。
 
-![KANAS 核心概念视图](./KANAS_concept_view.png)
+![KANAS 核心概念视图](./resource/KANAS_concept_view.png)
 *图 1：KANAS 核心概念视图。 KANAS 作为一个统一的 AI 原生 API 服务器，旨在将本地或远程的传统 API (Legacy APIs) 与智能体 API (Agent APIs) 进行整合、编排与智能转发，并以统一、可靠的方式暴露给大语言模型 (LLM)、软件智能体 (Agent) 和开发者 (Developer)。*
 
 **本质上 anp_tool是和mcp_client同一系统层级的服务，但是可以通过anp_tool组装 crawler暴露给mcp_client或者作为一个 anp_tool能调用的本地服务来降低主llm的token消耗，也可以通过生成local method 来降低crawler的反复token浪费，通过anp_tool作为缓冲层，降低了mcp_tool都传送到llm的消耗，也免除了手动mcp选择问题。**
