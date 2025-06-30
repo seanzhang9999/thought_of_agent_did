@@ -59,36 +59,26 @@ sequenceDiagram
 ```
 DID身份系统架构
 ```mermaid
-graph TB
-    subgraph "配置层"
-        Config[anp_open_sdk_framework_demo_agent_unified_config.yaml]
-        Config --> MultiAgent[multi_agent_mode]
-        Config --> AnpSdk[anp_sdk配置]
-        Config --> LLM[llm配置]
+graph LR
+    subgraph "DID身份体系"
+        DID1[did:wba:localhost%3A9527:wba:user:27c0b1d11180f973<br/>用户智能体安鹏]
+        DID2[did:wba:localhost%3A9527:wba:user:5fea49e183c6c211]
+        DID3[did:wba:localhost%3A9528:wba:user:3ea884878ea5fbb1<br/>本田]
+        DID4[did:wba:localhost%3A9528:wba:user:28cddee0fade0258<br/>Calculator Agent]
     end
     
-    subgraph "数据存储层"
-        DataUser[data_user目录]
-        DataUser --> Port9527[localhost_9527]
-        DataUser --> Port9528[localhost_9528]
-        
-        Port9527 --> AgentConfig9527[agents_config]
-        Port9527 --> AnpUsers9527[anp_users]
-        
-        Port9528 --> AgentConfig9528[agents_config]
-        Port9528 --> AnpUsers9528[anp_users]
+    subgraph "认证文件"
+        DID1 --> Config1[agent_cfg.yaml<br/>did_document.json<br/>private_key.pem]
+        DID2 --> Config2[agent_cfg.yaml<br/>did_document.json<br/>private_key.pem]
+        DID3 --> Config3[agent_cfg.yaml<br/>did_document.json<br/>private_key.pem]
+        DID4 --> Config4[agent_cfg.yaml<br/>did_document.json<br/>private_key.pem]
     end
     
-    subgraph "智能体实例层"
-        AgentConfig9527 --> OrchestratorAgent[orchestrator_agent]
-        AgentConfig9528 --> CalculatorAgent[calculator_agent]
-        
-        AnpUsers9527 --> User27c0["user_27c0b1d11180f973<br/>用户智能体安鹏"]
-        AnpUsers9527 --> User28cd[user_28cddee0fade0258]
-        AnpUsers9527 --> User5fea[user_5fea49e183c6c211]
-        
-        AnpUsers9528 --> User3ea8["user_3ea884878ea5fbb1<br/>本田"]
-        AnpUsers9528 --> UserCalc["user_28cddee0fade0258<br/>Calculator Agent"]
+    subgraph "API接口"
+        DID1 --> API1[OpenAPI YAML<br/>JSON-RPC接口]
+        DID2 --> API2[OpenAPI YAML<br/>消息接口]
+        DID3 --> API3[/hello, /info接口<br/>LLM聊天接口]
+        DID4 --> API4[/calculator/add接口<br/>数学运算服务]
     end
 ```
 配置文件结构分析
