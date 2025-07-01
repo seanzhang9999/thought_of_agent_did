@@ -50,10 +50,24 @@ def process_lines(lines):
     return output
 
 if __name__ == '__main__':
-    with open(input_file, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-    processed = process_lines(lines)
-    with open(output_file, 'w', encoding='utf-8') as f:
-        for line in processed:
-            f.write(line.rstrip() + '\n')
-    print(f"过滤和代码块标记完成，输出文件：{output_file}")
+    # 允许用户输入文件路径
+    user_input = input("请输入要处理的文件路径（相对于主目录）: ").strip()
+    if user_input:
+        input_file = user_input
+        # 生成对应的输出文件名
+        if input_file.endswith('.md'):
+            output_file = input_file.replace('.md', '.cleaned.md')
+        else:
+            output_file = input_file + '.cleaned'
+        try:
+            with open(input_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+            processed = process_lines(lines)
+            with open(output_file, 'w', encoding='utf-8') as f:
+                for line in processed:
+                    f.write(line.rstrip() + '\n')
+            print(f"过滤和代码块标记完成，输出文件：{output_file}")
+        except FileNotFoundError:
+            print(f"错误：找不到文件 {input_file}")
+        except Exception as e:
+            print(f"处理文件时出错：{e}")
