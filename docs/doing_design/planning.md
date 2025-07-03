@@ -4,7 +4,7 @@ ANP SDK 代码重构完整方案
 1. 整体架构重新设计
 1.1 新的目录结构
 
-Apply
+
 anp-open-sdk-monorepo/
 ├── /packages
 │   ├── /core                           # 核心SDK - 最小DID服务
@@ -47,7 +47,8 @@ anp-open-sdk-monorepo/
 2. 核心SDK重构
 2.1 更新 packages/core/anp_open_sdk/anp_sdk.py
 
-Apply
+
+```python
 """
 核心SDK - 只保留基础DID服务和Agent路由能力
 """
@@ -194,9 +195,13 @@ class ANPSDK:
             self.server_thread.join(timeout=5)
         self.server_running = False
         logger.info("🛑 Server stopped")
+
+```
+
 2.2 实现路由管理器
 
-Apply
+
+```python
 # packages/core/anp_open_sdk/service/router/route_manager.py
 
 from typing import Dict
@@ -258,9 +263,14 @@ class RouteManager:
         for cat in ['wba', 'publisher', 'agent', 'api', 'websocket']:
             all_routes[cat] = self.get_all_routes(cat)
         return all_routes
+
+```
+
 2.3 实现DID格式管理器
 
-Apply
+
+```python
+
 # packages/core/anp_open_sdk/service/router/did_format_manager.py
 
 import re
@@ -402,10 +412,14 @@ class DIDFormatManager:
             return None, None
         parts = method_id.split("::", 1)
         return parts[0], parts[1]
+
+```
+
 3. Framework层重构
 3.1 装饰器系统
 
-Apply
+
+```python
 # packages/framework/anp_open_sdk_framework/decorators/capability.py
 
 from typing import Dict, Any, List, Optional, Callable
@@ -489,9 +503,14 @@ def local_method(description: str = "", tags: List[str] = None):
         )(func)
     
     return decorator
+
+```
+
 3.2 MCP集成装饰器
 
-Apply
+
+```python
+
 # packages/framework/anp_open_sdk_framework/decorators/mcp_integration.py
 
 from typing import Dict, Any, List, Optional, Callable
@@ -570,9 +589,14 @@ def _get_mcp_client(server_name: str):
 def _register_mcp_client(server_name: str, client):
     """注册MCP客户端"""
     _mcp_clients[server_name] = client
+
+```
+
 3.3 简化的MCP客户端
 
-Apply
+
+```python
+
 # packages/framework/anp_open_sdk_framework/mcp_tools/mcp_client.py
 
 import asyncio
@@ -688,9 +712,14 @@ class SimpleMCPClient:
             await self.process.wait()
         self.connected = False
         logger.info(f"🔌 Disconnected MCP server: {self.server_name}")
+
+```
+
 3.4 Crawler作为MCP工具
 
-Apply
+
+```python
+
 # packages/framework/anp_open_sdk_framework/mcp_tools/crawler_tool.py
 
 import asyncio
@@ -870,9 +899,13 @@ async def start_crawler_mcp_server():
 
 if __name__ == "__main__":
     asyncio.run(start_crawler_mcp_server())
+
+```
+
 3.5 能力自动发现和发布
 
-Apply
+
+```python
 # packages/framework/anp_open_sdk_framework/capability_manager/discovery.py
 
 import importlib
@@ -993,9 +1026,14 @@ class CapabilityDiscovery:
         """清理MCP连接"""
         for client in self.mcp_clients.values():
             await client.close()
+
+```
+
 3.6 增强SDK
 
-Apply
+
+```python
+
 # packages/framework/anp_open_sdk_framework/enhanced_sdk.py
 
 from anp_open_sdk import ANPSDK
@@ -1031,11 +1069,15 @@ class EnhancedANPSDK(ANPSDK):
         """清理所有Agent"""
         for discovery in self.capability_managers.values():
             await discovery.cleanup()
+
+```
+
 4. 配置文件更新
 4.1 更新 
 unified_config.default.yaml
 
-Apply
+
+```python
 # ANP SDK 统一配置文件
 anp_sdk:
   debug_mode: true
@@ -1099,9 +1141,13 @@ anp_sdk:
     websocket:
       message: "/ws/message"
       agent: "/ws/agent"
+
+```
+
 4.2 更新配置类型
 
-Apply
+
+```python
 # packages/core/anp_open_sdk/config/config_types.py
 
 from typing import Protocol, List, Dict, Any
@@ -1156,10 +1202,16 @@ class AnpSdkConfig(Protocol):
     did_format: DIDFormatConfig
     routes: RoutesConfig
     # ... 其他现有配置
+
+
+```
+
+
 5. 使用示例
 5.1 Agent实现示例
 
-Apply
+
+```python
 # examples/my_agent/agent_functions.py
 
 from anp_open_sdk_framework.decorators import capability, mcp_tool, expose_api, mcp_server_config
@@ -1260,9 +1312,14 @@ async def weather_report(city: str, email: str):
     await read_file_mcp(f"/tmp/weather_report_{city}.txt")
     
     return {"report": report, "status": "sent"}
+
+```
+
 5.2 Agent初始化
 
-Apply
+
+```python
+
 # examples/my_agent/agent_handlers.py
 
 from anp_open_sdk_framework.enhanced_sdk import EnhancedANPSDK
@@ -1285,9 +1342,14 @@ async def cleanup_agent():
     """清理Agent"""
     # 清理逻辑
     pass
+
+```
+
+
 5.3 完整使用示例
 
-Apply
+
+```python
 # examples/demo_usage.py
 
 import asyncio
@@ -1333,6 +1395,9 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+```
+
 6. 总结
 这个重构方案实现了：
 
@@ -1374,7 +1439,9 @@ mcp_client做什么用
 MCP Client 是连接和调用 MCP 服务器的客户端。它的作用是：
 
 
-Apply
+
+```python
+
 # MCP Client 的核心功能
 class SimpleMCPClient:
     """MCP客户端 - 连接外部MCP服务器"""
@@ -1393,64 +1460,99 @@ class SimpleMCPClient:
             "params": {"name": tool_name, "arguments": arguments}
         }
         # 返回MCP服务器的响应
+
+```
+
 MCP Client 的具体用途
 连接外部工具服务器
+
+
+```python
 
 # 例如连接文件系统MCP服务器
 npx -y @modelcontextprotocol/server-filesystem /tmp
 
 # 或连接搜索MCP服务器  
 npx -y @modelcontextprotocol/server-brave-search
+
+```
+
 调用远程工具
 
 
-Apply
+
+```python
 # 通过MCP Client调用文件系统工具
 result = await mcp_client.call_tool("read_file", {"path": "/tmp/test.txt"})
 
 # 通过MCP Client调用搜索工具
 result = await mcp_client.call_tool("search_web", {"query": "ANP protocol"})
+
+```
+
 管理工具生命周期
 
 
-Apply
+
+```python
 # 发现可用工具
 tools = await mcp_client.discover_tools()
 
 # 关闭连接
 await mcp_client.close()
+
+```
+
+
 2. @mcp_tool 装饰器的作用
 装饰器的核心功能
 @mcp_tool 装饰器是一个自动化包装器，它的作用是：
 
 
-Apply
+
+```python
 @mcp_tool("crawl_agent", "crawler", "爬取智能体信息")
 async def crawl_agent_mcp(req_did: str, resp_did: str, task_input: str, initial_url: str):
     """通过MCP进行智能体爬取"""
     pass  # 这里不需要写实现代码！
+
+```
+
+
 装饰器自动做了什么？
 自动连接MCP服务器
 
 
-Apply
+
+```python
+
 # 装饰器内部会：
 # 1. 查找名为 "crawler" 的MCP服务器
 # 2. 如果没连接，自动连接
 mcp_client = _get_mcp_client("crawler")
+
+```
+
 自动调用MCP工具
 
 
-Apply
+
+```python
+
 # 装饰器内部会：
 async def mcp_wrapper(**kwargs):
     # 自动调用MCP工具 "crawl_agent"
     result = await mcp_client.call_tool("crawl_agent", kwargs)
     return result
+
+```
+
 自动注册为Agent能力
 
 
-Apply
+
+```python
+
 # 装饰器还会：
 # 1. 将函数注册为Agent的本地方法
 # 2. 生成标准的能力元数据
@@ -1472,9 +1574,15 @@ mcp_servers = {
 }
 
 # MCP Client 会启动这些外部进程
+
+
+```
+
 步骤2：装饰器自动包装
 
-Apply
+
+```python
+
 # 开发者只需要写这个
 @mcp_tool("crawl_agent", "crawler", "爬取智能体信息")
 async def crawl_agent_mcp(req_did: str, resp_did: str, task_input: str, initial_url: str):
@@ -1490,9 +1598,13 @@ async def crawl_agent_mcp(req_did: str, resp_did: str, task_input: str, initial_
         "initial_url": initial_url
     })
     return result
+```
+
 步骤3：实际调用流程
 
-Apply
+
+```python
+
 # 用户调用
 result = await agent.crawl_agent_mcp(
     req_did="did:wba:localhost:user:123",
@@ -1508,10 +1620,15 @@ result = await agent.crawl_agent_mcp(
 # 4. crawler服务器执行实际的爬取逻辑
 # 5. 返回结果给装饰器
 # 6. 装饰器返回结果给用户
+
+```
+
 4. 为什么要这样设计？
 优势1：解耦和模块化
 
-Apply
+
+```python
+
 # 不用MCP的方式（紧耦合）
 async def crawl_agent_direct(req_did, resp_did, task_input, initial_url):
     # 直接在这里写爬取逻辑
@@ -1522,25 +1639,39 @@ async def crawl_agent_direct(req_did, resp_did, task_input, initial_url):
 @mcp_tool("crawl_agent", "crawler")
 async def crawl_agent_mcp(req_did, resp_did, task_input, initial_url):
     pass  # 爬取逻辑在独立的MCP服务器中
+
+```
+
 优势2：工具复用
 
-Apply
+
+```python
 # 同一个MCP工具可以被多个Agent使用
 @mcp_tool("crawl_agent", "crawler")  # Agent A 使用
 async def agent_a_crawl(...): pass
 
 @mcp_tool("crawl_agent", "crawler")  # Agent B 也使用同一个工具
 async def agent_b_crawl(...): pass
+
+```
+
 优势3：语言无关
 
-Apply
+
+```python
 # MCP服务器可以用任何语言实现
 # Python Agent 可以调用 Node.js 实现的MCP工具
 @mcp_tool("search_web", "brave_search")  # Node.js实现的搜索工具
 async def search_web_mcp(query: str): pass
+
+```
+
+
 优势4：标准化接口
 
-Apply
+
+```python
+
 # 所有MCP工具都遵循相同的调用模式
 @mcp_tool("tool_name", "server_name", "description")
 async def any_tool(...): pass
@@ -1550,10 +1681,15 @@ async def any_tool(...): pass
 # - 标准的参数验证  
 # - 一致的日志记录
 # - 自动的能力注册
+
+```
+
 5. 实际使用对比
 传统方式（复杂）
 
-Apply
+
+```python
+
 # 需要手动管理连接、调用、错误处理
 class MyAgent:
     def __init__(self):
@@ -1575,9 +1711,13 @@ class MyAgent:
         except Exception as e:
             # 手动错误处理
             return {"error": str(e)}
+
+```
+
 MCP装饰器方式（简单）
 
-Apply
+
+```python
 # 一个装饰器搞定一切
 @mcp_tool("crawl_agent", "crawler", "爬取智能体信息")
 async def crawl_agent_mcp(req_did: str, resp_did: str, task_input: str, initial_url: str):
@@ -1589,6 +1729,9 @@ async def crawl_agent_mcp(req_did: str, resp_did: str, task_input: str, initial_
 # - 错误处理
 # - 能力注册
 # - 文档生成
+
+```
+
 总结
 MCP Client：负责与外部MCP服务器通信的底层客户端
 @mcp_tool装饰器：自动化包装器，让开发者无需关心MCP的复杂性
@@ -1614,7 +1757,8 @@ LLM工具调用接口 - LLM需要标准的工具描述格式
 扩展设计方案
 1. 增强的MCP工具装饰器
 
-Apply
+
+```python
 # packages/framework/anp_open_sdk_framework/decorators/mcp_integration.py
 
 def mcp_tool(tool_name: str, 
@@ -1687,7 +1831,13 @@ def mcp_tool(tool_name: str,
     
     return decorator
 
+```
+
+
 # 专门用于LLM的装饰器
+
+```python
+
 def llm_mcp_tool(tool_name: str, 
                  server_name: str = "default",
                  description: str = None,
@@ -1703,9 +1853,13 @@ def llm_mcp_tool(tool_name: str,
         expose_to_llm=True,
         require_approval=require_approval
     )
+
+```
+
 2. LLM工具管理器
 
-Apply
+
+```python
 # packages/framework/anp_open_sdk_framework/llm_integration/tool_manager.py
 
 from typing import Dict, List, Any, Optional
@@ -1792,7 +1946,10 @@ class LLMToolManager:
         """设置工具批准回调"""
         self.approval_callbacks[tool_name] = callback
 
+```
+
 # 全局批准请求函数
+```python
 async def _request_approval(tool_name: str, arguments: Dict[str, Any], 
                           call_context: Dict[str, Any]) -> bool:
     """请求用户批准工具调用"""
@@ -1826,9 +1983,14 @@ async def _log_llm_tool_call(tool_name: str, arguments: Dict[str, Any],
     
     # 可以保存到文件、数据库或发送到监控系统
     logger.info(f"LLM工具调用记录: {json.dumps(log_entry, ensure_ascii=False)}")
+
+```
+    
+
 3. LLM集成示例
 
-Apply
+
+```python
 # packages/framework/anp_open_sdk_framework/llm_integration/llm_agent.py
 
 import openai
@@ -1933,9 +2095,13 @@ class LLMAgent:
         except Exception as e:
             logger.error(f"LLM chat error: {e}")
             return f"抱歉，处理您的请求时出现错误: {str(e)}"
+
+```
+
 4. 使用示例
 
-Apply
+
+```python
 # examples/llm_agent/agent_functions.py
 
 from anp_open_sdk_framework.decorators import llm_mcp_tool, mcp_tool
@@ -1963,9 +2129,14 @@ async def crawl_agent_for_llm(req_did: str, resp_did: str, task_input: str, init
 async def write_file_internal(file_path: str, content: str):
     """只有Agent内部可以使用的文件写入工具"""
     pass
+    
+
+```
+
 5. Agent初始化和使用
 
-Apply
+
+```python
 # examples/llm_agent/agent_handlers.py
 
 from anp_open_sdk_framework.llm_integration.llm_agent import LLMAgent
@@ -2000,14 +2171,21 @@ async def initialize_agent(agent, sdk):
         }
     
     logger.info(f"🤖 LLM Agent initialized with {len(llm_agent.tool_manager.llm_tools)} tools")
+
+```
+
 6. 实际使用场景
 
-Apply
+
+```python
 # 用户通过HTTP API与LLM对话
 POST /agent/api/did:wba:localhost:user:123/chat
 {
     "message": "帮我搜索一下ANP协议的相关信息，然后读取/tmp/notes.txt文件的内容"
 }
+
+```
+
 
 # LLM会：
 # 1. 自动调用 search_web_for_llm("ANP协议")
