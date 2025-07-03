@@ -174,3 +174,90 @@ sdk = EnhancedANPSDK()
 SDK 和 Framework 都应该在各自目录中设计好扩展点和接口，分别关注自己的核心能力和扩展生态。这样既能独立发布为 PyPI 包，又能保证解耦和可扩展性。
 
 如需具体 setup.py/pyproject.toml 或接口示例，可继续追问！
+
+
+你的问题非常好，总结如下：
+
+1. SDK 扩展写法和放置目录
+SDK（如 anp_open_sdk）关注基础能力扩展点，比如存储、认证、Agent 基础行为等。
+SDK 的扩展点应该在 SDK 包内有接口（base.py），并有默认实现（local_file.py、token.py等），用户可以在自己的项目里继承这些接口，或者你可以在 SDK 包内增加新的实现。
+
+SDK 扩展的典型目录结构
+Plaintext
+
+Apply
+anp_open_sdk/
+  storage/
+    base.py         # 存储接口
+    local_file.py   # 文件实现
+    database.py     # 数据库存储实现
+  auth/
+    base.py         # 认证接口
+    token.py        # Token认证实现
+    did_signature.py# DID签名实现
+  agents/
+    base.py         # Agent接口
+    ...
+扩展方法
+官方扩展：直接在 SDK 包的 storage、auth、agents 等目录下增加新的实现文件（如 redis.py、jwt_auth.py）。
+用户自定义扩展：在用户自己的项目目录下实现接口，如：
+custom_storage.py
+
+Create file
+from anp_open_sdk.storage.base import AgentStorage
+
+class MyRedisStorage(AgentStorage):
+    ...
+然后在初始化 SDK 时通过参数注入：
+
+Python
+
+Apply
+sdk = ANPSDK(storage=MyRedisStorage())
+2. Framework 扩展写法和放置目录
+Framework（如 anp_open_sdk_framework）关注能力生态扩展点，比如 MCP 工具、能力注册、统一调用、协议集成等。
+
+Framework 扩展的典型目录结构
+Plaintext
+
+Apply
+anp_open_sdk_framework/
+  mcp_tools/
+    tool_registry.py    # 工具注册表
+    mcp_client.py       # MCP协议客户端
+    ...
+  decorators/
+    capability.py       # 能力声明装饰器
+    ...
+  capability_manager/
+    discovery.py        # 能力发现
+    ...
+  llm_integration/
+    tool_manager.py     # LLM工具管理
+    ...
+扩展方法
+官方扩展：直接在 framework 包的 mcp_tools、decorators、capability_manager 等目录下增加新协议、新能力管理器、新装饰器等。
+用户自定义扩展：在用户自己的项目目录下实现能力注册、装饰器等扩展，并在 framework 初始化时注册进去。例如：
+my_tools.py
+
+Create file
+from anp_open_sdk_framework.decorators.capability import capability
+
+@capability(name="my_awesome_tool")
+def my_tool(...):
+    ...
+或者实现自定义的工具注册器、协议集成器等。
+
+3. 放在哪个目录？如何组织？
+SDK 扩展点（如存储、认证、Agent）：放在 SDK 包内的 storage、auth、agents 等子目录下，接口和实现分离。
+Framework 扩展点（如能力注册、MCP工具、协议集成）：放在 framework 包内的 mcp_tools、decorators、capability_manager、llm_integration 等子目录下。
+用户自定义扩展可以放在自己的项目目录下，只要实现了对应接口/装饰器即可。
+官方扩展建议直接放在对应包的子目录下，便于统一管理和 PyPI 发布。
+
+4. 总结
+SDK 扩展点（如存储/认证）→ anp_open_sdk/storage/、anp_open_sdk/auth/
+Framework 扩展点（如MCP工具/能力注册/协议集成）→ anp_open_sdk_framework/mcp_tools/、anp_open_sdk_framework/decorators/
+用户自定义扩展 → 用户自己的项目目录，实现接口/装饰器即可
+原则：接口和默认实现都在包内，用户可继承或替换。扩展点目录清晰，易于维护和发现。
+
+如需具体代码示例或 setup.py/pyproject.toml 配置，可以继续追问！
