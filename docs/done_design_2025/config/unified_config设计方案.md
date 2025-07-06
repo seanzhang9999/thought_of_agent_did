@@ -77,7 +77,7 @@ anp_sdk:
   port: 9527
   user_did_path: "{APP_ROOT}/anp_open_sdk/anp_users"
   user_hosted_path: "{APP_ROOT}/anp_open_sdk/anp_users_hosted"
-  auth_virtual_dir: "wba/auth"
+  auth_virtual_dir: "wba/adapter_auth"
   msg_virtual_dir: "/agent/message"
   token_expire_time: 3600
   

@@ -192,7 +192,7 @@ ROUTE_MATCHING_ORDER = [
     "/docs",
     "/redoc",
     "/openapi.json",
-    "/wba/auth",
+    "/wba/adapter_auth",
 
     # 2. 静态路由模块（按注册顺序）
     "router_auth.router",      # 认证路由
@@ -764,7 +764,7 @@ async def auth_middleware(request: Request, call_next: Callable, auth_method: st
             content={"detail": exc.detail}
         )
     except Exception as e:
-        logger.debug(f"Unexpected error in auth middleware: {e}")
+        logger.debug(f"Unexpected error in adapter_auth middleware: {e}")
         return JSONResponse(
             status_code=500,
             content={"detail": "Internal server error"}
@@ -773,7 +773,7 @@ async def auth_middleware(request: Request, call_next: Callable, auth_method: st
 async def authenticate_request(request: Request, auth_server: AgentAuthServer):
     """认证请求处理"""
     # 1. 特殊路径处理
-    if request.url.path == "/wba/auth":
+    if request.url.path == "/wba/adapter_auth":
         logger.debug(f"安全中间件拦截/wba/auth进行认证")
         success, msg = await auth_server.verify_request(request)
         if not success:
@@ -838,7 +838,7 @@ if mode == SdkMode.MULTI_AGENT_ROUTER:
 # 启用的路由：
 ENABLED_ROUTES = [
     # 认证路由
-    "/wba/auth",
+    "/wba/adapter_auth",
 
     # DID文档路由
     "/wba/user/{user_id}/did.json",
@@ -887,7 +887,7 @@ PRIMARY_ROUTES = [
     "/wba/user/{user_id}/ad.json",
 
     # 认证服务
-    "/wba/auth"
+    "/wba/adapter_auth"
 ]
 ```
 

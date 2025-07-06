@@ -751,7 +751,7 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 # 或者针对特定模块
-logger = logging.getLogger("anp_open_sdk.auth")
+logger = logging.getLogger("anp_open_sdk.adapter_auth")
 logger.setLevel(logging.DEBUG)
 ```
 

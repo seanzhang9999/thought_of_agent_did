@@ -40,7 +40,7 @@
 
 ```bash
 # 创建目录结构
-anp_open_sdk/auth/
+anp_open_sdk/adapter_auth/
 ├── core/
 │   ├── __init__.py
 │   ├── context.py      # 认证上下文
@@ -326,7 +326,7 @@ class DIDWBAStrategy(AuthStrategy):
             return AuthResult(
                 status=AuthStatus.FAILED,
                 authenticated=False,
-                error="Invalid auth level for DID WBA"
+                error="Invalid adapter_auth level for DID WBA"
             )
     
     async def _try_two_way_auth(self, request: Request, context: AuthContext) -> AuthResult:
@@ -360,12 +360,12 @@ class DIDWBAStrategy(AuthStrategy):
                 return AuthResult(
                     status=AuthStatus.PARTIAL,
                     authenticated=False,
-                    error=f"Two-way auth failed: {msg}",
+                    error=f"Two-way adapter_auth failed: {msg}",
                     metadata={'should_downgrade': True}
                 )
                 
         except Exception as e:
-            logger.error(f"Two-way auth error: {e}")
+            logger.error(f"Two-way adapter_auth error: {e}")
             return AuthResult(
                 status=AuthStatus.PARTIAL,
                 authenticated=False,
@@ -420,11 +420,11 @@ API Request$0.0000
                 return AuthResult(
                     status=AuthStatus.FAILED,
                     authenticated=False,
-                    error=f"One-way auth failed: {msg}"
+                    error=f"One-way adapter_auth failed: {msg}"
                 )
                 
         except Exception as e:
-            logger.error(f"One-way auth error: {e}")
+            logger.error(f"One-way adapter_auth error: {e}")
             return AuthResult(
                 status=AuthStatus.FAILED,
                 authenticated=False,
@@ -639,8 +639,8 @@ class AuthMiddleware:
         # 构建认证上下文
         context = self._build_context(request)
         
-        # 特殊处理 /wba/auth 端点
-        if request.url.path == "/wba/auth":
+        # 特殊处理 /wba/adapter_auth 端点
+        if request.url.path == "/wba/adapter_auth":
             return await self._handle_auth_endpoint(request, context)
         
         try:
@@ -738,7 +738,7 @@ class AuthMiddleware:
         return None
     
     async def _handle_auth_endpoint(self, request: Request, context: AuthContext) -> Response:
-        """处理 /wba/auth 认证端点"""
+        """处理 /wba/adapter_auth 认证端点"""
         # 这是一个特殊端点，用于获取认证令牌
         result = await self.fallback_strategy.execute_with_fallback(
             request, context, self.strategies
@@ -950,7 +950,7 @@ API Request$0.0000
                         return AuthResponse(
                             success=False,
                             status_code=status,
-                            error=f"Token auth failed with status {status}"
+                            error=f"Token adapter_auth failed with status {status}"
                         )
                         
         except Exception as e:
@@ -1720,7 +1720,7 @@ for event in events:
 import logging
 
 # 启用详细日志
-logging.getLogger("anp_open_sdk.auth").setLevel(logging.DEBUG)
+logging.getLogger("anp_open_sdk.adapter_auth").setLevel(logging.DEBUG)
 ```
 
 ```javascript
