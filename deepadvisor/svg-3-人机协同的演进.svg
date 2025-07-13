@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">人-机协作在DIKIWI框架下的智能生产模式</text>
+  
+  <!-- 分层展示 -->
+  <g transform="translate(400, 150)">
+    <!-- 背景层 -->
+    <rect x="-350" y="-80" width="700" height="380" rx="10" ry="10" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+    
+    <!-- 标题 -->
+    <text x="0" y="-50" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">DIKIWI框架下的人机协作智能生产模式</text>
+    
+    <!-- 左侧：传统模式 -->
+    <g transform="translate(-250, 50)">
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">传统数字化模式</text>
+      
+      <!-- 人脑图标 -->
+      <circle cx="0" cy="20" r="40" fill="#ffd6e7" stroke="#eb2f96" stroke-width="2" />
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">人脑</text>
+      
+      <!-- 数据库图标 -->
+      <rect x="-30" y="80" width="60" height="40" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+      <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">数据库</text>
+      
+      <!-- 垂直箭头 -->
+      <line x1="0" y1="60" x2="0" y2="80" stroke="#666" stroke-width="2" />
+      <polygon points="0,80 -5,70 5,70" fill="#666" />
+      
+      <!-- 描述标签 -->
+      <rect x="-80" y="140" width="160" height="70" rx="5" ry="5" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+      <text x="0" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">数据信息处理与</text>
+      <text x="0" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">智力生产高度依赖人脑</text>
+      <text x="0" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">存在大量"空白区"</text>
+    </g>
+    
+    <!-- 中间：过渡模式 -->
+    <g transform="translate(0, 50)">
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">大模型辅助模式</text>
+      
+      <!-- 人脑图标 -->
+      <circle cx="-30" cy="20" r="30" fill="#ffd6e7" stroke="#eb2f96" stroke-width="2" />
+      <text x="-30" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">人脑</text>
+      
+      <!-- AI图标 -->
+      <circle cx="30" cy="20" r="30" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" />
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">AI</text>
+      
+      <!-- 连接线 -->
+      <line x1="-10" y1="20" x2="10" y2="20" stroke="#666" stroke-width="2" />
+      <polygon points="10,20 0,15 0,25" fill="#666" />
+      
+      <!-- 数据库图标 -->
+      <rect x="-30" y="80" width="60" height="40" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+      <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">数据库</text>
+      
+      <!-- 垂直箭头 -->
+      <line x1="0" y1="60" x2="0" y2="80" stroke="#666" stroke-width="2" />
+      <polygon points="0,80 -5,70 5,70" fill="#666" />
+      
+      <!-- 描述标签 -->
+      <rect x="-80" y="140" width="160" height="70" rx="5" ry="5" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+      <text x="0" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">人机协作</text>
+      <text x="0" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">人提供洞察与验证</text>
+      <text x="0" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">AI填补知识空白区</text>
+    </g>
+    
+    <!-- 右侧：智能体模式 -->
+    <g transform="translate(250, 50)">
+      <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">智能体自主模式</text>
+      
+      <!-- AI图标 -->
+      <circle cx="-30" cy="20" r="25" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" />
+      <text x="-30" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">AI-1</text>
+      
+      <!-- AI图标2 -->
+      <circle cx="30" cy="20" r="25" fill="#f9f0ff" stroke="#722ed1" stroke-width="2" />
+      <text x="30" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">AI-2</text>
+      
+      <!-- 连接线 -->
+      <line x1="-10" y1="20" x2="10" y2="20" stroke="#666" stroke-width="2" stroke-dasharray="3,3" />
+      <polygon points="10,20 0,15 0,25" fill="#666" />
+      
+      <!-- 人脑监督图标 -->
+      <circle cx="0" cy="-25" r="15" fill="#ffd6e7" stroke="#eb2f96" stroke-width="2" />
+      <text x="0" y="-22" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle">人脑</text>
+      
+      <!-- 监督线 -->
+      <line x1="0" y1="-10" x2="0" y2="0" stroke="#eb2f96" stroke-width="1" stroke-dasharray="2,2" />
+      
+      <!-- 数据库图标 -->
+      <rect x="-30" y="80" width="60" height="40" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+      <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">数据库</text>
+      
+      <!-- 垂直箭头 -->
+      <line x1="0" y1="50" x2="0" y2="80" stroke="#666" stroke-width="2" />
+      <polygon points="0,80 -5,70 5,70" fill="#666" />
+      
+      <!-- 描述标签 -->
+      <rect x="-80" y="140" width="160" height="70" rx="5" ry="5" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+      <text x="0" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">智能体协作自主闭环</text>
+      <text x="0" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">实现跨领域智力生产</text>
+      <text x="0" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">人类少量监督指导</text>
+    </g>
+    
+    <!-- 进化箭头 -->
+    <line x1="-170" y1="220" x2="-80" y2="220" stroke="#666" stroke-width="2" />
+    <polygon points="-80,220 -90,215 -90,225" fill="#666" />
+    
+    <line x1="80" y1="220" x2="170" y2="220" stroke="#666" stroke-width="2" />
+    <polygon points="170,220 160,215 160,225" fill="#666" />
+    
+    <text x="-125" y="240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">演进</text>
+    <text x="125" y="240" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">演进</text>
+  </g>
+  
+  <!-- 底部总结 -->
+  <g transform="translate(400, 470)">
+    <rect x="-350" y="0" width="700" height="100" rx="10" ry="10" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">DIKIWI框架下人机协作模式的价值</text>
+    <text x="-330" y="50" font-family="Arial, sans-serif" font-size="14">1. 填补传统数字化中依赖人脑的空白区域，实现无死角的数字化体系</text>
+    <text x="-330" y="75" font-family="Arial, sans-serif" font-size="14">2. 通过思维链和形式推理，实现智力生产工业化闭环</text>
+    <text x="-330" y="100" font-family="Arial, sans-serif" font-size="14">3. 随着技术演进，人类角色从主导者逐渐转变为监督者和指导者</text>
+  </g>
+</svg>

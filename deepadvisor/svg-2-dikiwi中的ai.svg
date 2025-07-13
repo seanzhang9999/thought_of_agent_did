@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">AI大模型在DIKIWI体系中的闭环流动</text>
+  
+  <!-- DKI闭环 -->
+  <g transform="translate(200, 180)">
+    <text x="0" y="-50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">DKI层面闭环</text>
+    
+    <!-- 循环箭头 -->
+    <circle cx="0" cy="0" r="120" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+    
+    <!-- 数据节点 -->
+    <circle cx="-85" cy="-85" r="40" fill="#fff" stroke="#1890ff" stroke-width="2" />
+    <text x="-85" y="-85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">数据</text>
+    <text x="-85" y="-70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Data</text>
+    
+    <!-- 信息节点 -->
+    <circle cx="85" cy="-85" r="40" fill="#fff" stroke="#1890ff" stroke-width="2" />
+    <text x="85" y="-85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">信息</text>
+    <text x="85" y="-70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Info</text>
+    
+    <!-- 知识节点 -->
+    <circle cx="0" cy="85" r="40" fill="#fff" stroke="#1890ff" stroke-width="2" />
+    <text x="0" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">知识</text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Knowledge</text>
+    
+    <!-- 连接箭头 -->
+    <path d="M-55 -55 A120 120 0 0 1 55 -55" fill="none" stroke="#1890ff" stroke-width="2" />
+    <polygon points="55,-55 45,-60 50,-50" fill="#1890ff" />
+    
+    <path d="M85 -45 A120 120 0 0 1 40 75" fill="none" stroke="#1890ff" stroke-width="2" />
+    <polygon points="40,75 30,70 35,80" fill="#1890ff" />
+    
+    <path d="M-40 75 A120 120 0 0 1 -85 -45" fill="none" stroke="#1890ff" stroke-width="2" />
+    <polygon points="-85,-45 -95,-50 -90,-40" fill="#1890ff" />
+    
+    <!-- 特点描述 -->
+    <rect x="-150" y="150" width="300" height="60" rx="5" ry="5" fill="#fff" stroke="#1890ff" stroke-width="1" />
+    <text x="0" y="170" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">大模型的语言理解能力</text>
+    <text x="0" y="190" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">通过少量知识触类旁通</text>
+  </g>
+  
+  <!-- IWI闭环 -->
+  <g transform="translate(600, 180)">
+    <text x="0" y="-50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">IWI层面闭环</text>
+    
+    <!-- 循环箭头 -->
+    <circle cx="0" cy="0" r="120" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+    
+    <!-- 洞察节点 -->
+    <circle cx="-85" cy="-85" r="40" fill="#fff" stroke="#52c41a" stroke-width="2" />
+    <text x="-85" y="-85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">洞察</text>
+    <text x="-85" y="-70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Insight</text>
+    
+    <!-- 智慧节点 -->
+    <circle cx="85" cy="-85" r="40" fill="#fff" stroke="#52c41a" stroke-width="2" />
+    <text x="85" y="-85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">智慧</text>
+    <text x="85" y="-70" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Wisdom</text>
+    
+    <!-- 影响力节点 -->
+    <circle cx="0" cy="85" r="40" fill="#fff" stroke="#52c41a" stroke-width="2" />
+    <text x="0" y="85" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">影响力</text>
+    <text x="0" y="100" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Impact</text>
+    
+    <!-- 连接箭头 -->
+    <path d="M-55 -55 A120 120 0 0 1 55 -55" fill="none" stroke="#52c41a" stroke-width="2" />
+    <polygon points="55,-55 45,-60 50,-50" fill="#52c41a" />
+    
+    <path d="M85 -45 A120 120 0 0 1 40 75" fill="none" stroke="#52c41a" stroke-width="2" />
+    <polygon points="40,75 30,70 35,80" fill="#52c41a" />
+    
+    <path d="M-40 75 A120 120 0 0 1 -85 -45" fill="none" stroke="#52c41a" stroke-width="2" />
+    <polygon points="-85,-45 -95,-50 -90,-40" fill="#52c41a" />
+    
+    <!-- 特点描述 -->
+    <rect x="-150" y="150" width="300" height="60" rx="5" ry="5" fill="#fff" stroke="#52c41a" stroke-width="1" />
+    <text x="0" y="170" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">大模型的思维链能力</text>
+    <text x="0" y="190" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">实现智力生产工业化</text>
+  </g>
+  
+  <!-- 两个循环之间的连接 -->
+  <line x1="320" y1="180" x2="480" y2="180" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="480,180 470,175 470,185" fill="#666" />
+  
+  <!-- 解释性文本 -->
+  <g transform="translate(400, 430)">
+    <rect x="-350" y="0" width="700" height="120" rx="10" ry="10" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">AI大模型在DIKIWI中的价值</text>
+    <text x="-330" y="45" font-family="Arial, sans-serif" font-size="14">1. DKI层面：通过语言表达实现从少量知识泛化到更广领域，强大的映射变换能力</text>
+    <text x="-330" y="70" font-family="Arial, sans-serif" font-size="14">2. IWI层面：思维链能力支持问题洞察、路径探索和验证，智力生产工业化</text>
+    <text x="-330" y="95" font-family="Arial, sans-serif" font-size="14">3. 跨层级整合：将不同知识的不同表达通过IWI工业化能力打通，实现跨领域智能生产</text>
+    <text x="-330" y="120" font-family="Arial, sans-serif" font-size="14">4. 人机协作：在各层级支持不同程度的人机协作，填补传统数字化的空白区域</text>
+  </g>
+</svg>

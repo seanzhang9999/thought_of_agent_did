@@ -1,0 +1,207 @@
+
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1400" height="1000" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="700" y="30" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1e293b">ANP-KANAS-DeepAdvise 完整技术栈演进架构</text>
+  <text x="700" y="55" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#64748b">从底层协议到上层应用的完整低熵网络生态</text>
+  
+  <!-- 应用层 -->
+  <rect x="50" y="80" width="1300" height="120" fill="#8b5cf6" rx="15" opacity="0.15"/>
+  <text x="70" y="110" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#5b21b6">应用层 - DeepAdvise 产品生态</text>
+  
+  <!-- PAA -->
+  <rect x="100" y="130" width="200" height="60" fill="#8b5cf6" rx="10"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">PAA</text>
+  <text x="200" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">Personal AI Advisor</text>
+  
+  <!-- DeepResearch -->
+  <rect x="320" y="130" width="200" height="60" fill="#7c3aed" rx="10"/>
+  <text x="420" y="155" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">DeepResearch</text>
+  <text x="420" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">深度研究分析</text>
+  
+  <!-- DeepCoding -->
+  <rect x="540" y="130" width="200" height="60" fill="#6d28d9" rx="10"/>
+  <text x="640" y="155" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">DeepCoding</text>
+  <text x="640" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">智能编程助手</text>
+  
+  <!-- 其他垂直应用 -->
+  <rect x="760" y="130" width="200" height="60" fill="#5b21b6" rx="10"/>
+  <text x="860" y="155" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">垂直应用</text>
+  <text x="860" y="175" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">行业定制化</text>
+  
+  <!-- DIKIWI流程展示 -->
+  <rect x="1000" y="130" width="300" height="60" fill="#f3f4f6" rx="10" stroke="#d1d5db"/>
+  <text x="1020" y="150" font-family="Arial, sans-serif" font-size="12" fill="#374151" font-weight="bold">DIKIWI降熵流程:</text>
+  <text x="1020" y="165" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Data→Info→Knowledge→Insight→Wisdom→Impact</text>
+  <text x="1020" y="180" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">高熵信息 → 低熵智慧决策</text>
+  
+  <!-- 服务层 -->
+  <rect x="50" y="220" width="1300" height="120" fill="#10b981" rx="15" opacity="0.15"/>
+  <text x="70" y="250" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#065f46">服务层 - DeepAdvise Engine</text>
+  
+  <!-- DIKIWI处理引擎 -->
+  <rect x="100" y="270" width="300" height="60" fill="#10b981" rx="10"/>
+  <text x="250" y="295" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">DIKIWI处理引擎</text>
+  <text x="250" y="315" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">主要矛盾识别 + 智慧生成</text>
+  
+  <!-- 规划沙箱 -->
+  <rect x="420" y="270" width="300" height="60" fill="#059669" rx="10"/>
+  <text x="570" y="295" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">规划沙箱</text>
+  <text x="570" y="315" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">低成本试错 + Token经济学</text>
+  
+  <!-- 动态本体系统 -->
+  <rect x="740" y="270" width="300" height="60" fill="#047857" rx="10"/>
+  <text x="890" y="295" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">动态本体系统</text>
+  <text x="890" y="315" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">知识图谱 + 智能体网络</text>
+  
+  <!-- 人机协作界面 -->
+  <rect x="1060" y="270" width="240" height="60" fill="#065f46" rx="10"/>
+  <text x="1180" y="295" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">人机协作</text>
+  <text x="1180" y="315" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">关键节点激发</text>
+  
+  <!-- 平台层 -->
+  <rect x="50" y="360" width="1300" height="140" fill="#f59e0b" rx="15" opacity="0.15"/>
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#92400e">平台层 - KANAS Network (知识感知自适应AI原生能力服务器)</text>
+  
+  <!-- EOC三件套 -->
+  <rect x="100" y="410" width="180" height="80" fill="#f59e0b" rx="10"/>
+  <text x="190" y="435" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">Exposer</text>
+  <text x="190" y="450" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">服务暴露器</text>
+  <text x="190" y="465" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">统一装饰器</text>
+  <text x="190" y="480" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">多协议适配</text>
+  
+  <rect x="300" y="410" width="180" height="80" fill="#d97706" rx="10"/>
+  <text x="390" y="435" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">Orchestrator</text>
+  <text x="390" y="450" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">智能编排器</text>
+  <text x="390" y="465" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">知识感知</text>
+  <text x="390" y="480" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">自适应调整</text>
+  
+  <rect x="500" y="410" width="180" height="80" fill="#b45309" rx="10"/>
+  <text x="590" y="435" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">Caller</text>
+  <text x="590" y="450" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">统一调用器</text>
+  <text x="590" y="465" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">智能路由</text>
+  <text x="590" y="480" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">语义匹配</text>
+  
+  <!-- KANAS特色能力 -->
+  <rect x="700" y="410" width="280" height="80" fill="#92400e" rx="10"/>
+  <text x="840" y="430" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">KANAS核心能力</text>
+  <text x="720" y="450" font-family="Arial, sans-serif" font-size="11" fill="white">• Knowledge-aware: 知识感知</text>
+  <text x="720" y="465" font-family="Arial, sans-serif" font-size="11" fill="white">• Adaptive: 自适应编排</text>
+  <text x="720" y="480" font-family="Arial, sans-serif" font-size="11" fill="white">• AI Native: LLM友好设计</text>
+  
+  <!-- 低熵网络示意 -->
+  <rect x="1000" y="410" width="300" height="80" fill="#f3f4f6" rx="10" stroke="#d1d5db"/>
+  <text x="1020" y="430" font-family="Arial, sans-serif" font-size="12" fill="#374151" font-weight="bold">低熵网络构建:</text>
+  <text x="1020" y="445" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">KANAS节点 + ANP协议 + 智能路由</text>
+  <text x="1020" y="460" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">分布式服务发现 + 集体智慧积累</text>
+  <text x="1020" y="475" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">整体熵值持续降低</text>
+  
+  <!-- 框架层 -->
+  <rect x="50" y="520" width="1300" height="120" fill="#3b82f6" rx="15" opacity="0.15"/>
+  <text x="70" y="550" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1e40af">框架层 - ANP Framework (EOC脚手架)</text>
+  
+  <!-- 装饰器系统 -->
+  <rect x="100" y="570" width="250" height="60" fill="#3b82f6" rx="10"/>
+  <text x="225" y="595" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">统一装饰器系统</text>
+  <text x="225" y="615" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">@capability 极简语法</text>
+  
+  <!-- EOC接口定义 -->
+  <rect x="370" y="570" width="250" height="60" fill="#2563eb" rx="10"/>
+  <text x="495" y="595" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">EOC接口定义</text>
+  <text x="495" y="615" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">标准化框架结构</text>
+  
+  <!-- 扩展机制 -->
+  <rect x="640" y="570" width="250" height="60" fill="#1d4ed8" rx="10"/>
+  <text x="765" y="595" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">扩展机制</text>
+  <text x="765" y="615" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">插件化架构</text>
+  
+  <!-- 兼容性保证 -->
+  <rect x="910" y="570" width="250" height="60" fill="#1e40af" rx="10"/>
+  <text x="1035" y="595" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">兼容性保证</text>
+  <text x="1035" y="615" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">多实现统一标准</text>
+  
+  <!-- 协议层 -->
+  <rect x="50" y="660" width="1300" height="120" fill="#ef4444" rx="15" opacity="0.15"/>
+  <text x="70" y="690" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#991b1b">协议层 - ANP SDK (去中心化身份与安全通信)</text>
+  
+  <!-- DID认证 -->
+  <rect x="100" y="710" width="200" height="60" fill="#ef4444" rx="10"/>
+  <text x="200" y="735" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">DID身份管理</text>
+  <text x="200" y="755" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">去中心化身份</text>
+  
+  <!-- 安全通信 -->
+  <rect x="320" y="710" width="200" height="60" fill="#dc2626" rx="10"/>
+  <text x="420" y="735" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">安全通信</text>
+  <text x="420" y="755" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">端到端加密</text>
+  
+  <!-- 双向协议 -->
+  <rect x="540" y="710" width="200" height="60" fill="#b91c1c" rx="10"/>
+  <text x="640" y="735" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">双向协议</text>
+  <text x="640" y="755" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">回调机制</text>
+  
+  <!-- 群组协作 -->
+  <rect x="760" y="710" width="200" height="60" fill="#991b1b" rx="10"/>
+  <text x="860" y="735" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">群组协作</text>
+  <text x="860" y="755" font-family="Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">多智能体管理</text>
+  
+  <!-- 技术优势 -->
+  <rect x="980" y="710" width="320" height="60" fill="#f3f4f6" rx="10" stroke="#d1d5db"/>
+  <text x="1000" y="730" font-family="Arial, sans-serif" font-size="12" fill="#374151" font-weight="bold">相对MCP/A2A优势:</text>
+  <text x="1000" y="745" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">• 长期任务协作 • 事件驱动架构</text>
+  <text x="1000" y="760" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">• 智能化回调 • 会话管理</text>
+  
+  <!-- 核心价值主张 -->
+  <rect x="50" y="800" width="1300" height="120" fill="#1f2937" rx="15"/>
+  <text x="700" y="830" font-family="Arial, sans-serif" font-size="22" fill="white" text-anchor="middle" font-weight="bold">核心价值主张: 构建AI原生的低熵智能服务网络</text>
+  
+  <!-- 价值点 -->
+  <circle cx="150" cy="860" r="6" fill="#10b981"/>
+  <text x="165" y="865" font-family="Arial, sans-serif" font-size="13" fill="white">技术创新: SOA 2.0演进</text>
+  
+  <circle cx="350" cy="860" r="6" fill="#10b981"/>
+  <text x="365" y="865" font-family="Arial, sans-serif" font-size="13" fill="white">理念创新: 人-智-服范式</text>
+  
+  <circle cx="550" cy="860" r="6" fill="#10b981"/>
+  <text x="565" y="865" font-family="Arial, sans-serif" font-size="13" fill="white">商业创新: 多层价值链</text>
+  
+  <circle cx="750" cy="860" r="6" fill="#10b981"/>
+  <text x="765" y="865" font-family="Arial, sans-serif" font-size="13" fill="white">生态价值: 网络效应</text>
+  
+  <circle cx="950" cy="860" r="6" fill="#10b981"/>
+  <text x="965" y="865" font-family="Arial, sans-serif" font-size="13" fill="white">用户价值: 降熵决策</text>
+  
+  <!-- 演进路径 -->
+  <text x="700" y="890" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">演进路径: ANP基础协议 → KANAS智能平台 → DeepAdvise产品应用</text>
+  <text x="700" y="910" font-family="Arial, sans-serif" font-size="14" fill="#6b7280" text-anchor="middle">从底层基础设施到上层产品价值的完整技术栈</text>
+  
+  <!-- 连接线 -->
+  <!-- 应用层到服务层 -->
+  <line x1="200" y1="190" x2="200" y2="270" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="420" y1="190" x2="420" y2="270" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="640" y1="190" x2="640" y2="270" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="860" y1="190" x2="860" y2="270" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- 服务层到平台层 -->
+  <line x1="250" y1="330" x2="250" y2="410" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="570" y1="330" x2="570" y2="410" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="890" y1="330" x2="890" y2="410" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- 平台层到框架层 -->
+  <line x1="225" y1="490" x2="225" y2="570" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="495" y1="490" x2="495" y2="570" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="765" y1="490" x2="765" y2="570" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- 框架层到协议层 -->
+  <line x1="225" y1="630" x2="225" y2="710" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="495" y1="630" x2="495" y2="710" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <line x1="765" y1="630" x2="765" y2="710" stroke="#374151" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="9" refX="11" refY="4.5" orient="auto">
+      <polygon points="0 0, 12 4.5, 0 9" fill="#374151"/>
+    </marker>
+  </defs>
+</svg>

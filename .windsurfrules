@@ -1,0 +1,9 @@
+default_action: write_to_file
+fallback: write_to_file
+rules:
+  - match: "*.svg"
+    action: write_to_file
+  - match: "*.md"
+    action: replace_in_file
+    options:
+      activate_diff_editor: false

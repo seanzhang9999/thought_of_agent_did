@@ -1,0 +1,95 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="timelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="33%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="66%" style="stop-color:#45b7d1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#96ceb4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1200" height="600" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    Web发展史与范式演进时间线
+  </text>
+  
+  <!-- 时间线主轴 -->
+  <line x1="100" y1="300" x2="1100" y2="300" stroke="url(#timelineGrad)" stroke-width="6"/>
+  
+  <!-- Web 1.0 节点 -->
+  <circle cx="200" cy="300" r="15" fill="#ff6b6b" filter="url(#glow)"/>
+  <rect x="120" y="150" width="160" height="100" rx="10" fill="#fff" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="200" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff6b6b">Web 1.0</text>
+  <text x="200" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">1990s-2000s</text>
+  <text x="200" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">门户黄页</text>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">解决"知"</text>
+  <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Yahoo, 搜狐</text>
+  
+  <!-- Web 2.0 节点 -->
+  <circle cx="400" cy="300" r="15" fill="#4ecdc4" filter="url(#glow)"/>
+  <rect x="320" y="150" width="160" height="100" rx="10" fill="#fff" stroke="#4ecdc4" stroke-width="2"/>
+  <text x="400" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4ecdc4">Web 2.0</text>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">2000s-2010s</text>
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">社交网络</text>
+  <text x="400" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">优化"知"</text>
+  <text x="400" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Facebook, 微博</text>
+  
+  <!-- 移动互联网 节点 -->
+  <circle cx="600" cy="300" r="15" fill="#45b7d1" filter="url(#glow)"/>
+  <rect x="520" y="150" width="160" height="100" rx="10" fill="#fff" stroke="#45b7d1" stroke-width="2"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#45b7d1">移动互联网</text>
+  <text x="600" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">2010s-2020s</text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">算法推荐</text>
+  <text x="600" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">"知-用"一体</text>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">TikTok, 头条</text>
+  
+  <!-- ANP Framework 节点 -->
+  <circle cx="900" cy="300" r="20" fill="#96ceb4" filter="url(#glow)"/>
+  <rect x="820" y="150" width="160" height="100" rx="10" fill="#fff" stroke="#96ceb4" stroke-width="2"/>
+  <text x="900" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#96ceb4">ANP Framework</text>
+  <text x="900" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">2020s+</text>
+  <text x="900" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">智能服务</text>
+  <text x="900" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">"人-智-服"</text>
+  <text x="900" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">工具服务蓝海</text>
+  
+  <!-- 下方说明 -->
+  <rect x="120" y="380" width="160" height="80" rx="8" fill="#fff2f2" stroke="#ff6b6b" stroke-width="1"/>
+  <text x="200" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ff6b6b">信息发现</text>
+  <text x="200" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">用户主动浏览</text>
+  <text x="200" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">分类目录导航</text>
+  <text x="200" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">解决"有什么"</text>
+  
+  <rect x="320" y="380" width="160" height="80" rx="8" fill="#f2fffe" stroke="#4ecdc4" stroke-width="1"/>
+  <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4ecdc4">信息过滤</text>
+  <text x="400" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">社交关系推荐</text>
+  <text x="400" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">个性化内容</text>
+  <text x="400" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">解决"我要什么"</text>
+  
+  <rect x="520" y="380" width="160" height="80" rx="8" fill="#f2f8ff" stroke="#45b7d1" stroke-width="1"/>
+  <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#45b7d1">内容消费</text>
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">算法自动推送</text>
+  <text x="600" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">被动接受内容</text>
+  <text x="600" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">只解决消费型"用"</text>
+  
+  <rect x="820" y="380" width="160" height="80" rx="8" fill="#f2fff8" stroke="#96ceb4" stroke-width="1"/>
+  <text x="900" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#96ceb4">服务编排</text>
+  <text x="900" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">智能理解意图</text>
+  <text x="900" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">自动执行服务</text>
+  <text x="900" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">解决工具型"用"</text>
+  
+  <!-- 突破点标注 -->
+  <ellipse cx="750" cy="300" rx="80" ry="30" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="750" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">突破点</text>
+  <text x="750" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">从内容消费</text>
+  <text x="750" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">到工具服务</text>
+</svg>

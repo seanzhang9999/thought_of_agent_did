@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">DIKW与DIKIWI知识管理模型比较</text>
+  
+  <!-- DIKW模型 (左侧) -->
+  <g transform="translate(200, 100)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">DIKW模型</text>
+    
+    <!-- 金字塔 -->
+    <polygon points="-150,300 150,300 100,100 -100,100" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+    <line x1="-150" y1="300" x2="150" y2="300" stroke="#1890ff" stroke-width="2" />
+    <line x1="-125" y1="250" x2="125" y2="250" stroke="#1890ff" stroke-width="2" />
+    <line x1="-100" y1="200" x2="100" y2="200" stroke="#1890ff" stroke-width="2" />
+    <line x1="-100" y1="150" x2="100" y2="150" stroke="#1890ff" stroke-width="2" />
+    
+    <!-- 文字标签 -->
+    <text x="0" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">数据 (Data)</text>
+    <text x="0" y="225" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">信息 (Information)</text>
+    <text x="0" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">知识 (Knowledge)</text>
+    <text x="0" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">智慧 (Wisdom)</text>
+  </g>
+  
+  <!-- DIKIWI模型 (右侧) -->
+  <g transform="translate(600, 100)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">DIKIWI模型</text>
+    
+    <!-- 金字塔 -->
+    <polygon points="-150,350 150,350 100,50 -100,50" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+    <line x1="-150" y1="350" x2="150" y2="350" stroke="#52c41a" stroke-width="2" />
+    <line x1="-133" y1="300" x2="133" y2="300" stroke="#52c41a" stroke-width="2" />
+    <line x1="-117" y1="250" x2="117" y2="250" stroke="#52c41a" stroke-width="2" />
+    <line x1="-108" y1="200" x2="108" y2="200" stroke="#52c41a" stroke-width="2" />
+    <line x1="-100" y1="150" x2="100" y2="150" stroke="#52c41a" stroke-width="2" />
+    <line x1="-100" y1="100" x2="100" y2="100" stroke="#52c41a" stroke-width="2" />
+    
+    <!-- 文字标签 -->
+    <text x="0" y="325" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">数据 (Data)</text>
+    <text x="0" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">信息 (Information)</text>
+    <text x="0" y="225" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">知识 (Knowledge)</text>
+    <text x="0" y="175" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">洞察 (Insight)</text>
+    <text x="0" y="125" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">智慧 (Wisdom)</text>
+    <text x="0" y="75" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">影响力 (Impact)</text>
+  </g>
+  
+  <!-- 连接线和描述 -->
+  <line x1="300" y1="400" x2="500" y2="400" stroke="#666" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="500,400 490,395 490,405" fill="#666" />
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">扩展与增强</text>
+  
+  <!-- DIKIWI相对DIKW的增强和创新点 -->
+  <g transform="translate(400, 470)">
+    <rect x="-250" y="0" width="500" height="100" rx="10" ry="10" fill="#fff" stroke="#d9d9d9" stroke-width="1" />
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">DIKIWI模型的创新点</text>
+    <text x="-230" y="45" font-family="Arial, sans-serif" font-size="14">1. 洞察(Insight): 从知识中发现新关联与模式的能力</text>
+    <text x="-230" y="70" font-family="Arial, sans-serif" font-size="14">2. 影响力(Impact): 智慧转化为实际效果与变革的能力</text>
+    <text x="-230" y="95" font-family="Arial, sans-serif" font-size="14">3. 更适合描述AI大模型与知识管理的关系</text>
+  </g>
+</svg>
