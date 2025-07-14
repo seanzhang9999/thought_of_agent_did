@@ -256,13 +256,13 @@ Less Glue Code + More Intelligent Cooperation + 持续演进
 ### 1.6 技术架构关系图：ARIIA与各组件的关系
 
 #### ARIIA核心理念架构图：Less Glue Code, More Intelligent Cooperation
-```
-![• 持续学习和演进](_持续学习和演进.svg)
-```
+
+![持续学习和演进](_持续学习和演进.svg)
+
 #### ANP技术栈架构关系图：从协议到应用的完整体系
-```
+
 ![ANP技术栈架构关系图：从协议到应用的完整体系](ANP技术栈架构关系图_从协议到应用的完整体系.svg)
-```
+
 #### 核心关系解释
 
 **重新理解：ARIIA = KANAS**
