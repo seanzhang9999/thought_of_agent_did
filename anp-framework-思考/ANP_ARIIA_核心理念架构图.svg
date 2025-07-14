@@ -1,0 +1,202 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="coreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="platformGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="appGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="700" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b">
+    ANP技术栈架构关系图：从协议到应用的完整体系
+  </text>
+  
+  <!-- 层级标签 -->
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">应用层</text>
+  <text x="50" y="320" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">平台层</text>
+  <text x="50" y="520" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">框架层</text>
+  <text x="50" y="720" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">协议层</text>
+  
+  <!-- 应用层 -->
+  <g transform="translate(150, 80)">
+    <!-- PAA -->
+    <rect x="0" y="0" width="200" height="120" rx="15" fill="url(#appGradient)" filter="url(#shadow)"/>
+    <text x="100" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">PAA</text>
+    <text x="100" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Personal AI Assistant</text>
+    <text x="100" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 意图理解</text>
+    <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 跨端同步</text>
+    <text x="100" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 用户界面</text>
+    
+    <!-- DeepAdvise -->
+    <rect x="250" y="0" width="200" height="120" rx="15" fill="url(#appGradient)" filter="url(#shadow)"/>
+    <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">DeepAdvise</text>
+    <text x="350" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Deep Advisory System</text>
+    <text x="350" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• DeepResearch</text>
+    <text x="350" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• DeepInsight</text>
+    <text x="350" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• DIKIWI框架</text>
+    
+    <!-- 企业应用 -->
+    <rect x="500" y="0" width="200" height="120" rx="15" fill="url(#appGradient)" filter="url(#shadow)"/>
+    <text x="600" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">Enterprise Apps</text>
+    <text x="600" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">企业级应用</text>
+    <text x="600" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 定制解决方案</text>
+    <text x="600" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 行业应用</text>
+    <text x="600" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 私有部署</text>
+  </g>
+  
+  <!-- 平台层 -->
+  <g transform="translate(150, 280)">
+    <!-- KANAS -->
+    <rect x="0" y="0" width="300" height="120" rx="15" fill="url(#platformGradient)" filter="url(#shadow)"/>
+    <text x="150" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">KANAS</text>
+    <text x="150" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Knowledge-aware Adaptive Network AI Server</text>
+    <text x="150" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 智能编排引擎</text>
+    <text x="150" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 服务发现与路由</text>
+    <text x="150" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 知识感知与自适应</text>
+    
+    <!-- ARIIA核心 -->
+    <rect x="350" y="0" width="350" height="120" rx="15" fill="#8B5CF6" filter="url(#shadow)"/>
+    <text x="525" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">ANP ARIIA</text>
+    <text x="525" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Agent Resource Integration & Intelligent Adapter</text>
+    <text x="400" y="65" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 身份孤岛解决</text>
+    <text x="400" y="78" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 智能适配器</text>
+    <text x="400" y="91" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 运行时连接</text>
+    <text x="550" y="65" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 三维资源整合</text>
+    <text x="550" y="78" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 智能Wrapper</text>
+    <text x="550" y="91" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.8)">• 统一通信网络</text>
+  </g>
+  
+  <!-- 框架层 -->
+  <g transform="translate(150, 480)">
+    <!-- ANP Framework -->
+    <rect x="0" y="0" width="550" height="120" rx="15" fill="url(#coreGradient)" filter="url(#shadow)"/>
+    <text x="275" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">ANP Framework</text>
+    <text x="275" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Agent Network Protocol Framework</text>
+    <text x="180" y="70" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• EOC脚手架</text>
+    <text x="180" y="85" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 标准定义</text>
+    <text x="180" y="100" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 开发工具</text>
+    <text x="370" y="70" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• MCP兼容</text>
+    <text x="370" y="85" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• A2A扩展</text>
+    <text x="370" y="100" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 插件生态</text>
+  </g>
+  
+  <!-- 协议层 -->
+  <g transform="translate(150, 680)">
+    <!-- ANP SDK -->
+    <rect x="0" y="0" width="550" height="120" rx="15" fill="#64748B" filter="url(#shadow)"/>
+    <text x="275" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white">ANP SDK</text>
+    <text x="275" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">Agent Network Protocol Software Development Kit</text>
+    <text x="150" y="70" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 去中心化身份</text>
+    <text x="150" y="85" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 安全通信</text>
+    <text x="150" y="100" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 双向协议</text>
+    <text x="400" y="70" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 多语言支持</text>
+    <text x="400" y="85" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 跨平台兼容</text>
+    <text x="400" y="100" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">• 开源协议</text>
+  </g>
+  
+  <!-- 连接线 -->
+  <!-- 应用层到平台层 -->
+  <line x1="250" y1="200" x2="300" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="200" x2="400" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="200" x2="550" y2="280" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 平台层到框架层 -->
+  <line x1="300" y1="400" x2="350" y2="480" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="525" y1="400" x2="475" y2="480" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 框架层到协议层 -->
+  <line x1="425" y1="600" x2="425" y2="680" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- 右侧说明 -->
+  <g transform="translate(800, 200)">
+    <rect x="0" y="0" width="550" height="500" rx="15" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="275" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">
+      架构关系说明
+    </text>
+    
+    <!-- ARIIA核心地位 -->
+    <text x="20" y="70" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8B5CF6">
+      🔧 ANP ARIIA - 核心引擎
+    </text>
+    <text x="30" y="95" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 是整个技术栈的核心智能引擎
+    </text>
+    <text x="30" y="115" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 提供Agent间的智能连接和适配能力
+    </text>
+    <text x="30" y="135" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 解决身份孤岛和新旧系统融合问题
+    </text>
+    
+    <!-- KANAS关系 -->
+    <text x="20" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#10B981">
+      🚀 KANAS - 智能编排平台
+    </text>
+    <text x="30" y="195" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 基于ARIIA构建的智能服务编排平台
+    </text>
+    <text x="30" y="215" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 提供知识感知和自适应能力
+    </text>
+    <text x="30" y="235" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 是PAA和DeepAdvise的运行时支撑
+    </text>
+    
+    <!-- PAA关系 -->
+    <text x="20" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#F59E0B">
+      👤 PAA - 个人AI助手
+    </text>
+    <text x="30" y="295" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 运行在KANAS平台上的用户应用
+    </text>
+    <text x="30" y="315" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 通过ARIIA实现智能工具编排
+    </text>
+    <text x="30" y="335" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 面向个人用户的AI工具集成界面
+    </text>
+    
+    <!-- DeepAdvise关系 -->
+    <text x="20" y="370" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#F59E0B">
+      🧠 DeepAdvise - 深度智慧系统
+    </text>
+    <text x="30" y="395" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 基于KANAS+ARIIA的高级智慧应用
+    </text>
+    <text x="30" y="415" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 实现DIKIWI框架的深度分析能力
+    </text>
+    <text x="30" y="435" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      • 面向企业和研究机构的决策支持
+    </text>
+    
+    <!-- 技术栈关系 -->
+    <text x="20" y="470" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3B82F6">
+      🏗️ 技术栈层次关系
+    </text>
+    <text x="30" y="495" font-family="Arial, sans-serif" font-size="14" fill="#64748b">
+      ANP SDK → ANP Framework → ARIIA+KANAS → PAA+DeepAdvise
+    </text>
+  </g>
+</svg>
