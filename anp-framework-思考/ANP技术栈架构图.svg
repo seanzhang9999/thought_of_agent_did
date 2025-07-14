@@ -1,0 +1,205 @@
+<svg width="800" height="750" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sdkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357ABD;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7ED321;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5BA517;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="frameworkGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5A623;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D1891A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="appGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9013FE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6200EA;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="750" fill="#f8f9fa"/>
+  
+  <!-- 标题 -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    ANP技术栈架构图
+  </text>
+  
+  <!-- 应用层：PA & KANAS -->
+  <rect x="100" y="70" width="600" height="100" rx="10" ry="10" fill="url(#appGradient)" filter="url(#shadow)"/>
+  <text x="400" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    应用层 (Applications)
+  </text>
+  
+  <!-- PA应用 -->
+  <rect x="120" y="110" width="270" height="45" rx="5" ry="5" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+  <text x="255" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+    PA (Personal Agent)
+    apache 2.0
+  </text>
+  <text x="255" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#E1BEE7">
+    个人智能体助手
+  </text>
+  
+  <!-- KANAS应用 -->
+  <rect x="410" y="110" width="270" height="45" rx="5" ry="5" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1"/>
+  <text x="545" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+    KANAS (AI Native API Server)
+    agpl 3.0
+  </text>
+  <text x="545" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#E1BEE7">
+    知识感知自适应API服务器
+  </text>
+  
+  <!-- Framework层：anp_framework -->
+  <rect x="100" y="200" width="600" height="130" rx="10" ry="10" fill="url(#frameworkGradient)" filter="url(#shadow)"/>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    anp_framework (框架层)
+  </text>
+  <text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    装饰器模式 - 快速绑定用户Agent代码到DID User
+  </text>
+  <text x="400" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    统一暴露ANP格式API
+  </text>
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff3cd">
+    @capability, @mcp_tool, @expose_api 装饰器系统
+  </text>
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff3cd">
+    License: Apache 2.0
+  </text>
+  
+  <!-- 中层：anp_server -->
+  <rect x="100" y="370" width="600" height="130" rx="10" ry="10" fill="url(#serverGradient)" filter="url(#shadow)"/>
+  <text x="400" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    anp_server (服务层)
+  </text>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    DID用户多域名多租户管理
+  </text>
+  <text x="400" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    路由管理 + 认证中间件
+  </text>
+  <text x="400" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#d4edda">
+    RouteManager, DIDFormatManager, ConfigManager
+  </text>
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d4edda">
+    License: AGPL 3.0
+  </text>
+  
+  <!-- 底层：anp_sdk -->
+  <rect x="100" y="540" width="600" height="130" rx="10" ry="10" fill="url(#sdkGradient)" filter="url(#shadow)"/>
+  <text x="400" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    anp_sdk (基础层)
+  </text>
+  <text x="400" y="595" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    认证基本能力 + 核心服务
+  </text>
+  <text x="400" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
+    DID协议 + Agent通信 + 配置管理
+  </text>
+  <text x="400" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cce5ff">
+    Core Layer: 基础服务, Framework Layer: 高级功能
+  </text>
+  <text x="400" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cce5ff">
+    License: Apache 2.0
+  </text>
+  
+  <!-- 连接箭头 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- 应用层 -> Framework层 -->
+  <line x1="400" y1="170" x2="400" y2="200" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="420" y="190" font-family="Arial, sans-serif" font-size="12" fill="#666">依赖</text>
+  
+  <!-- Framework层 -> Server层 -->
+  <line x1="400" y1="330" x2="400" y2="370" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="420" y="355" font-family="Arial, sans-serif" font-size="12" fill="#666">依赖</text>
+  
+  <!-- Server层 -> SDK层 -->
+  <line x1="400" y1="500" x2="400" y2="540" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="420" y="525" font-family="Arial, sans-serif" font-size="12" fill="#666">依赖</text>
+  
+  <!-- 左侧功能说明 -->
+  <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#6200EA">
+    应用层
+  </text>
+  <text x="50" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#D1891A">
+    框架层
+  </text>
+  <text x="50" y="435" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#5BA517">
+    服务层
+  </text>
+  <text x="50" y="605" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#357ABD">
+    基础层
+  </text>
+  
+  <!-- 右侧技术特点 -->
+  <g transform="translate(720, 80)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">
+      技术特点
+    </text>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 智能体应用
+    </text>
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • API服务编排
+    </text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 知识感知适应
+    </text>
+    
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 装饰器驱动
+    </text>
+    <text x="0" y="95" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 声明式编程
+    </text>
+    <text x="0" y="110" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 自动API生成
+    </text>
+    
+    <text x="0" y="140" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 多租户支持
+    </text>
+    <text x="0" y="155" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 域名路由
+    </text>
+    <text x="0" y="170" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 认证中间件
+    </text>
+    
+    <text x="0" y="200" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • DID协议
+    </text>
+    <text x="0" y="215" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 异步架构
+    </text>
+    <text x="0" y="230" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      • 模块化设计
+    </text>
+  </g>
+  
+  <!-- 数据流向箭头 -->
+  <g transform="translate(50, 700)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">
+      数据流向
+    </text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="110" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      用户请求 → 应用处理 → 框架装饰 → 服务路由 → 基础认证
+    </text>
+    <line x1="100" y1="30" x2="0" y2="30" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="110" y="35" font-family="Arial, sans-serif" font-size="10" fill="#666">
+      认证结果 → 服务响应 → 框架格式化 → 应用展示 → 用户接收
+    </text>
+  </g>
+</svg>

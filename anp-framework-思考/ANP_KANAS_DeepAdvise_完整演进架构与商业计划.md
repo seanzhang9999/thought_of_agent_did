@@ -2,11 +2,11 @@
 
 ## 架构概览
 
-![alt text](architect.svg)
+![alt text](01-architect.svg)
 
 ## 双轨战略可视化
 
-![双轨并行产品战略](双轨并行产品战略.svg)
+![双轨并行产品战略](02-双轨并行产品战略.svg)
 
 ---
 
@@ -88,7 +88,7 @@ PAA+KANAS是一个解决AI工具使用疲劳的智能编排平台，通过意图
 
 ### 1.3 竞争态势分析
 
-![竞争态势分析图](竞争态势分析图.svg)
+![竞争态势分析图](03-竞争态势分析图.svg)
 
 #### 直接竞争对手
 **MCP生态**
@@ -116,7 +116,7 @@ PAA+KANAS是一个解决AI工具使用疲劳的智能编排平台，通过意图
 
 ### 1.4 KANAS vs 智能Browser：双向奔赴的生态理念
 
-![图表1](chart_1.svg)
+![图表1](04-chart_1.svg)
 
 #### 双向奔赴的生态理念
 
@@ -257,11 +257,11 @@ Less Glue Code + More Intelligent Cooperation + 持续演进
 
 #### ARIIA核心理念架构图：Less Glue Code, More Intelligent Cooperation
 
-![持续学习和演进](_持续学习和演进.svg)
+![持续学习和演进](05-_持续学习和演进.svg)
 
 #### ANP技术栈架构关系图：从协议到应用的完整体系
 
-![ANP技术栈架构关系图：从协议到应用的完整体系](ANP技术栈架构关系图_从协议到应用的完整体系.svg)
+![ANP技术栈架构关系图：从协议到应用的完整体系](06-ANP技术栈架构关系图_从协议到应用的完整体系.svg)
 
 #### 核心关系解释
 
@@ -550,11 +550,11 @@ AI服务层：各种AI工具 + API接口
 
 #### PAA产品矩阵
 
-![图表3](chart_3.svg)
+![图表3](07-chart_3.svg)
 
 ### 2.5 PAA核心价值场景：基于DIKIWI框架的智慧层赋能
 
-![• 关联分析](_关联分析.svg)
+![• 关联分析](08-_关联分析.svg)
 
 **PAA Personal（个人版）**
 - 浏览器插件：Chrome、Edge、Safari
@@ -568,15 +568,15 @@ AI服务层：各种AI工具 + API接口
 
 #### KANAS服务架构
 
-![KANAS开源到企业演进路径](KANAS开源到企业演进路径.svg)
+![KANAS开源到企业演进路径](09-KANAS开源到企业演进路径.svg)
 
 ### 2.2 KANAS核心价值：AI Native API Server的演进
 
-![KANAS核心价值：AI Native API Server的演进路径](KANAS核心价值_AI_Native_API_Server的演进路径.svg)
+![KANAS核心价值：AI Native API Server的演进路径](10-KANAS核心价值_AI_Native_API_Server的演进路径.svg)
 
 ### 2.4 KANAS核心架构价值场景
 
-![KANAS核心架构价值场景：从"人-知-用"到"人-智-服"](KANAS核心架构价值场景_从_人_知_用_到_人_智_服_.svg)
+![KANAS核心架构价值场景：从"人-知-用"到"人-智-服"](11-KANAS核心架构价值场景_从_人_知_用_到_人_智_服_.svg)
 
 **KANAS Open Source（开源版）**
 - GitHub开源，MIT许可证
@@ -1451,7 +1451,7 @@ class EnterpriseSecurityManager:
 
 ### 4.2 收入模型优化
 
-![PAA+KANAS多元化收入模型](PAA_KANAS多元化收入模型.svg)
+![PAA+KANAS多元化收入模型](12-PAA_KANAS多元化收入模型.svg)
 
 #### 多元化收入来源
 **订阅收入（70%）**
