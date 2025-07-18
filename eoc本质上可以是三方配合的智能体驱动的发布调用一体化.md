@@ -315,4 +315,6 @@ framekwork也可以通过装饰器层不同来发布lite版和pro版对吧
 
 
 
-less glue code more reasoning coordination
+less glue code more reasoning orchestrator
+
+大模型是应该通用编排加垂直编排 再垂直生成
