@@ -312,3 +312,7 @@ framekwork也可以通过装饰器层不同来发布lite版和pro版对吧
 这样canas就是 framework pro
 个人就是 framework lite+inside anp cas
 企业就是 framework lie/pro + anp cas server
+
+
+
+less glue code more reasoning coordination
