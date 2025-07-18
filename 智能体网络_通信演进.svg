@@ -1,0 +1,183 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="900" height="700" fill="#f8fafc"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="30" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">
+    智能体网络：从通讯到IT服务的演进
+  </text>
+  
+  <!-- 三个阶段演进 -->
+  <!-- 阶段1：传统通讯 -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="240" height="140" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" rx="10"/>
+    <text x="120" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#334155">传统通讯时代</text>
+    <circle cx="60" cy="60" r="18" fill="#3b82f6"/>
+    <text x="60" y="66" text-anchor="middle" font-size="10" fill="white">用户A</text>
+    <circle cx="180" cy="60" r="18" fill="#3b82f6"/>
+    <text x="180" y="66" text-anchor="middle" font-size="10" fill="white">用户B</text>
+    <line x1="78" y1="60" x2="162" y2="60" stroke="#64748b" stroke-width="3"/>
+    <text x="120" y="55" text-anchor="middle" font-size="9" fill="#64748b">手机号直连</text>
+    <text x="120" y="90" text-anchor="middle" font-size="11" fill="#475569">点对点语音/文字连接</text>
+    <text x="120" y="105" text-anchor="middle" font-size="11" fill="#475569">用户自主选择通信方</text>
+    <text x="120" y="120" text-anchor="middle" font-size="11" fill="#475569">运营商基于通讯标准化协议提供通讯能力</text>
+  </g>
+  
+  <!-- 阶段2：智能手机 -->
+  <g transform="translate(330, 60)">
+    <rect x="0" y="0" width="240" height="140" fill="#ddd6fe" stroke="#8b5cf6" stroke-width="2" rx="10"/>
+    <text x="120" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b21b6">智能手机时代</text>
+    <circle cx="60" cy="60" r="18" fill="#8b5cf6"/>
+    <text x="60" y="66" text-anchor="middle" font-size="10" fill="white">用户A</text>
+    <rect x="100" y="40" width="40" height="40" fill="#a855f7" rx="5"/>
+    <text x="120" y="55" text-anchor="middle" font-size="9" fill="white">应用</text>
+    <text x="120" y="68" text-anchor="middle" font-size="9" fill="white">商店</text>
+    <circle cx="180" cy="60" r="18" fill="#8b5cf6"/>
+    <text x="180" y="66" text-anchor="middle" font-size="10" fill="white">用户B</text>
+    <line x1="78" y1="60" x2="100" y2="60" stroke="#7c3aed" stroke-width="2"/>
+    <line x1="140" y1="60" x2="162" y2="60" stroke="#7c3aed" stroke-width="2"/>
+    <text x="120" y="95" text-anchor="middle" font-size="11" fill="#5b21b6">基于应用的中介连接</text>
+    <text x="120" y="110" text-anchor="middle" font-size="11" fill="#5b21b6">用户自主安装使用</text>
+    <text x="120" y="125" text-anchor="middle" font-size="11" fill="#5b21b6">开发者基于智能手机操作系统提供应用能力</text>
+  </g>
+  
+  <!-- 阶段3：智能体网络 -->
+  <g transform="translate(610, 60)">
+    <rect x="0" y="0" width="240" height="140" fill="#dcfce7" stroke="#22c55e" stroke-width="2" rx="10"/>
+    <text x="120" y="20" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">智能体网络时代</text>
+    <circle cx="60" cy="60" r="18" fill="#22c55e"/>
+    <text x="60" y="66" text-anchor="middle" font-size="10" fill="white">用户</text>
+    <polygon points="100,40 140,40 140,80 100,80" fill="#16a34a"/>
+    <text x="120" y="55" text-anchor="middle" font-size="9" fill="white">智能体</text>
+    <text x="120" y="68" text-anchor="middle" font-size="9" fill="white">网络</text>
+    <circle cx="180" cy="60" r="18" fill="#22c55e"/>
+    <text x="180" y="66" text-anchor="middle" font-size="10" fill="white">服务</text>
+    <line x1="78" y1="60" x2="100" y2="60" stroke="#16a34a" stroke-width="3"/>
+    <line x1="140" y1="60" x2="162" y2="60" stroke="#16a34a" stroke-width="3"/>
+    <text x="120" y="95" text-anchor="middle" font-size="11" fill="#15803d">用户自主授权自动执行</text>
+    <text x="120" y="110" text-anchor="middle" font-size="11" fill="#15803d">LLM赋能意图驱动</text>
+    <text x="120" y="125" text-anchor="middle" font-size="11" fill="#15803d">用户基于智能体交互自定义自生成业务功能实现</text>
+  </g>
+  
+  <!-- DID身份平面核心架构 -->
+  <g transform="translate(50, 230)">
+    <rect x="0" y="0" width="800" height="160" fill="#fef3c7" stroke="#f59e0b" stroke-width="3" rx="15"/>
+    <text x="400" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#92400e">DID身份平面</text>
+    
+    <!-- 用户DID -->
+    <g transform="translate(50, 40)">
+      <rect x="0" y="0" width="150" height="90" fill="#fed7aa" stroke="#ea580c" stroke-width="2" rx="8"/>
+      <text x="75" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">用户DID</text>
+      <text x="75" y="35" text-anchor="middle" font-size="10" fill="#9a3412">• 多种认证方式</text>
+      <text x="75" y="50" text-anchor="middle" font-size="10" fill="#9a3412">• 个人数据索引</text>
+      <text x="75" y="65" text-anchor="middle" font-size="10" fill="#9a3412">• 服务授权凭证</text>
+      <text x="75" y="80" text-anchor="middle" font-size="10" fill="#9a3412">• 用户自身资源</text>
+    </g>
+    
+    <!-- 身份互联层 -->
+    <g transform="translate(250, 40)">
+      <rect x="0" y="0" width="300" height="90" fill="#fde68a" stroke="#d97706" stroke-width="2" rx="8"/>
+      <text x="150" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">DID互联认证层</text>
+      <text x="150" y="35" text-anchor="middle" font-size="10" fill="#92400e">去中心化身份验证 • 跨域授权管理</text>
+      <text x="150" y="50" text-anchor="middle" font-size="10" fill="#92400e">类似手机号的通用性 • 无需依赖特定平台</text>
+      <text x="150" y="65" text-anchor="middle" font-size="10" fill="#92400e">用户↔服务 • 用户↔用户 • 服务↔服务</text>
+      <text x="150" y="80" text-anchor="middle" font-size="10" fill="#92400e">简化不同体系间的认证</text>
+    </g>
+    
+    <!-- 服务方DID -->
+    <g transform="translate(600, 40)">
+      <rect x="0" y="0" width="150" height="90" fill="#fed7aa" stroke="#ea580c" stroke-width="2" rx="8"/>
+      <text x="75" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#9a3412">服务方DID</text>
+      <text x="75" y="35" text-anchor="middle" font-size="10" fill="#9a3412">• 多级内网资源</text>
+      <text x="75" y="50" text-anchor="middle" font-size="10" fill="#9a3412">• 企业服务接口</text>
+      <text x="75" y="65" text-anchor="middle" font-size="10" fill="#9a3412">• 权限管理体系</text>
+      <text x="75" y="80" text-anchor="middle" font-size="10" fill="#9a3412">• 服务能力描述</text>
+    </g>
+    
+    <!-- 连接箭头 -->
+    <path d="M 200 85 L 250 85" stroke="#d97706" stroke-width="3" fill="none" marker-end="url(#arrowhead2)"/>
+    <path d="M 550 85 L 600 85" stroke="#d97706" stroke-width="3" fill="none" marker-end="url(#arrowhead2)"/>
+  </g>
+  
+  <!-- 智能体网络层 -->
+  <g transform="translate(50, 420)">
+    <rect x="0" y="0" width="800" height="160" fill="#dcfce7" stroke="#22c55e" stroke-width="3" rx="15"/>
+    <text x="400" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#15803d">以连接为中心的智能体网络</text>
+    
+    <!-- 个人数据中心 -->
+    <g transform="translate(50, 40)">
+      <rect x="0" y="0" width="180" height="90" fill="#bbf7d0" stroke="#16a34a" stroke-width="2" rx="8"/>
+      <text x="90" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">个人数据中心</text>
+      <text x="90" y="35" text-anchor="middle" font-size="10" fill="#14532d">• 用户个人化数据</text>
+      <text x="90" y="50" text-anchor="middle" font-size="10" fill="#14532d">• 上下文积累迭代</text>
+      <text x="90" y="65" text-anchor="middle" font-size="10" fill="#14532d">• 意图理解分析</text>
+      <text x="90" y="80" text-anchor="middle" font-size="10" fill="#14532d">• 个性化智能模型</text>
+    </g>
+    
+    <!-- 智能体执行层 -->
+    <g transform="translate(280, 40)">
+      <rect x="0" y="0" width="240" height="90" fill="#a7f3d0" stroke="#059669" stroke-width="2" rx="8"/>
+      <text x="120" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">LLM/Agent执行层</text>
+      <text x="120" y="35" text-anchor="middle" font-size="10" fill="#14532d">• 用户意图解析 • 任务自动编排</text>
+      <text x="120" y="50" text-anchor="middle" font-size="10" fill="#14532d">• 服务自动发现 • 权限自动申请</text>
+      <text x="120" y="65" text-anchor="middle" font-size="10" fill="#14532d">• 跨服务协调 • 数据聚合复用</text>
+      <text x="120" y="80" text-anchor="middle" font-size="10" fill="#14532d">• 无需云环境依赖 • 自主编排</text>
+    </g>
+    
+    <!-- 网络接口标准 -->
+    <g transform="translate(570, 40)">
+      <rect x="0" y="0" width="180" height="90" fill="#bbf7d0" stroke="#16a34a" stroke-width="2" rx="8"/>
+      <text x="90" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">智能体网络</text>
+      <text x="90" y="35" text-anchor="middle" font-size="10" fill="#14532d">• Agent通信协议</text>
+      <text x="90" y="50" text-anchor="middle" font-size="10" fill="#14532d">• 适于智能体访问</text>
+      <text x="90" y="65" text-anchor="middle" font-size="10" fill="#14532d">• 网络资源组织</text>
+      <text x="90" y="80" text-anchor="middle" font-size="10" fill="#14532d">• 互操作性保障</text>
+    </g>
+    
+    <!-- 连接箭头 -->
+    <path d="M 230 85 L 280 85" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+    <path d="M 520 85 L 570 85" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowhead3)"/>
+  </g>
+  
+  <!-- 核心价值和关键点 -->
+  <g transform="translate(50, 610)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#15803d">核心价值：</text>
+    <text x="0" y="20" font-size="11" fill="#166534">• 用户数据自主控制，反复积累迭代</text>
+    <text x="0" y="35" font-size="11" fill="#166534">• LLM赋能用户个人聚合数据个人化</text>
+    <text x="300" y="20" font-size="11" fill="#166534">• 基于用户意图的自动连接</text>
+    <text x="300" y="35" font-size="11" fill="#166534">• 业务功能自定义自生成</text>
+  </g>
+  
+  <g transform="translate(620, 610)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#dc2626">关键挑战：</text>
+    <text x="0" y="20" font-size="11" fill="#991b1b">• 行业标准制定和生态建设</text>
+    <text x="0" y="35" font-size="11" fill="#991b1b">• 用户习惯转变和APP化普及</text>
+  </g>
+  
+  <!-- 为什么这样演进 -->
+  <g transform="translate(50, 660)">
+    <text x="0" y="0" font-size="12" font-weight="bold" fill="#7c3aed">为什么？</text>
+    <text x="60" y="0" font-size="11" fill="#7c3aed">LLM/Agent的多层级部署和自定义能力让用户可以充分使用个人数据，而无需依托云环境支持</text>
+  </g>
+  
+  <!-- 演进箭头 -->
+  <path d="M 290 130 Q 310 130 330 130" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 570 130 Q 590 130 610 130" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 垂直连接 -->
+  <path d="M 450 200 L 450 230" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 450 390 L 450 420" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- 箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d97706"/>
+    </marker>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#059669"/>
+    </marker>
+  </defs>
+</svg>

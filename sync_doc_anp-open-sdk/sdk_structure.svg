@@ -1,0 +1,121 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #2c3e50; }
+      .module-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #34495e; }
+      .component { font-family: Arial, sans-serif; font-size: 14px; fill: #2c3e50; }
+      .description { font-family: Arial, sans-serif; font-size: 12px; fill: #7f8c8d; }
+      .arrow { stroke: #3498db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .dependency { stroke: #e74c3c; stroke-width: 2; fill: none; marker-end: url(#arrowhead-red); stroke-dasharray: 5,5; }
+      .sdk-box { fill: #ecf0f1; stroke: #bdc3c7; stroke-width: 2; }
+      .server-box { fill: #e8f5e8; stroke: #27ae60; stroke-width: 2; }
+      .framework-box { fill: #fff3cd; stroke: #f39c12; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db" />
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c" />
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="500" y="30" text-anchor="middle" class="title">ANP Open SDK 架构关系图</text>
+
+  <!-- anp_sdk 模块 -->
+  <rect x="50" y="80" width="280" height="320" rx="10" class="sdk-box"/>
+  <text x="190" y="105" text-anchor="middle" class="module-title">anp_sdk/</text>
+  <text x="60" y="125" class="description">核心SDK层 - 基础设施和工具</text>
+  
+  <text x="60" y="150" class="component">• ANPUser (DID身份管理)</text>
+  <text x="60" y="170" class="component">• LocalUserData (用户数据)</text>
+  <text x="60" y="190" class="component">• ContactManager (联系人)</text>
+  <text x="60" y="210" class="component">• UnifiedConfig (配置)</text>
+  <text x="60" y="230" class="component">• DID工具 (did/)</text>
+  <text x="60" y="250" class="component">• 认证模块 (auth/)</text>
+  <text x="60" y="270" class="component">• 域名管理 (domain/)</text>
+  <text x="60" y="290" class="component">• 日志工具 (utils/)</text>
+  
+  <text x="60" y="320" class="description">职责：提供基础的DID身份、数据管理</text>
+  <text x="60" y="340" class="description">和配置功能，是整个系统的基石</text>
+
+  <!-- anp_server 模块 -->
+  <rect x="380" y="80" width="280" height="320" rx="10" class="server-box"/>
+  <text x="520" y="105" text-anchor="middle" class="module-title">anp_server/</text>
+  <text x="390" y="125" class="description">HTTP服务器层 - 网络通信和路由</text>
+  
+  <text x="390" y="150" class="component">• ANP_Server (主服务器)</text>
+  <text x="390" y="170" class="component">• ServerMode (运行模式)</text>
+  <text x="390" y="190" class="component">• AuthMiddleware (认证中间件)</text>
+  <text x="390" y="210" class="component">• RouterAgent (Agent路由)</text>
+  <text x="390" y="230" class="component">• RouterDID (DID路由)</text>
+  <text x="390" y="250" class="component">• RouterAuth (认证路由)</text>
+  <text x="390" y="270" class="component">• RouterPublisher (发布路由)</text>
+  <text x="390" y="290" class="component">• HostedDID (托管DID)</text>
+  
+  <text x="390" y="320" class="description">职责：提供HTTP服务、路由分发</text>
+  <text x="390" y="340" class="description">和网络通信功能</text>
+
+  <!-- anp_server_framework 模块 -->
+  <rect x="710" y="80" width="280" height="320" rx="10" class="framework-box"/>
+  <text x="850" y="105" text-anchor="middle" class="module-title">anp_server_framework/</text>
+  <text x="720" y="125" class="description">Agent框架层 - 智能体管理和服务</text>
+  
+  <text x="720" y="150" class="component">• Agent (智能体实例)</text>
+  <text x="720" y="170" class="component">• AgentManager (智能体管理)</text>
+  <text x="720" y="190" class="component">• AgentDecorator (装饰器)</text>
+  <text x="720" y="210" class="component">• GlobalRouter (全局路由)</text>
+  <text x="720" y="230" class="component">• GlobalMessageManager (消息)</text>
+  <text x="720" y="250" class="component">• ANPTool (工具服务)</text>
+  <text x="720" y="270" class="component">• LocalService (本地服务)</text>
+  <text x="720" y="290" class="component">• GroupRunner (群组管理)</text>
+  
+  <text x="720" y="320" class="description">职责：提供高级Agent抽象、装饰器</text>
+  <text x="720" y="340" class="description">和智能体生命周期管理</text>
+
+  <!-- 依赖关系箭头 -->
+  <!-- anp_server 依赖 anp_sdk -->
+  <line x1="380" y1="200" x2="330" y2="200" class="dependency"/>
+  <text x="355" y="195" class="description">依赖</text>
+  
+  <!-- anp_server_framework 依赖 anp_sdk -->
+  <line x1="710" y1="180" x2="330" y2="180" class="dependency"/>
+  <text x="520" y="175" class="description">依赖</text>
+  
+  <!-- anp_server_framework 依赖 anp_server -->
+  <line x1="710" y1="220" x2="660" y2="220" class="dependency"/>
+  <text x="685" y="215" class="description">依赖</text>
+
+  <!-- 数据流箭头 -->
+  <!-- 用户请求流 -->
+  <line x1="520" y1="450" x2="850" y2="450" class="arrow"/>
+  <text x="685" y="445" class="description">请求转发到Agent</text>
+  
+  <!-- Agent响应流 -->
+  <line x1="850" y1="470" x2="520" y2="470" class="arrow"/>
+  <text x="685" y="485" class="description">Agent响应返回</text>
+
+  <!-- 层次说明 -->
+  <rect x="50" y="520" width="900" height="220" rx="10" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="500" y="545" text-anchor="middle" class="module-title">架构层次说明</text>
+  
+  <text x="70" y="570" class="component">1. 基础层 (anp_sdk/)：</text>
+  <text x="90" y="590" class="description">• 提供DID身份管理、用户数据存储、配置管理等基础功能</text>
+  <text x="90" y="605" class="description">• ANPUser是核心身份容器，LocalUserData管理用户文件和密钥</text>
+  
+  <text x="70" y="630" class="component">2. 服务层 (anp_server/)：</text>
+  <text x="90" y="650" class="description">• 基于FastAPI构建HTTP服务器，处理网络请求和路由分发</text>
+  <text x="90" y="665" class="description">• 提供认证中间件、多种运行模式和托管DID服务</text>
+  
+  <text x="70" y="690" class="component">3. 框架层 (anp_server_framework/)：</text>
+  <text x="90" y="710" class="description">• 提供高级Agent抽象，支持装饰器式API和消息处理器注册</text>
+  <text x="90" y="725" class="description">• 管理Agent生命周期、共享DID模式和全局路由/消息分发</text>
+
+  <!-- 图例 -->
+  <rect x="750" y="520" width="200" height="80" rx="5" fill="#ffffff" stroke="#dee2e6" stroke-width="1"/>
+  <text x="850" y="540" text-anchor="middle" class="component">图例</text>
+  <line x1="760" y1="550" x2="790" y2="550" class="dependency"/>
+  <text x="800" y="555" class="description">依赖关系</text>
+  <line x1="760" y1="570" x2="790" y2="570" class="arrow"/>
+  <text x="800" y="575" class="description">数据流</text>
+</svg>

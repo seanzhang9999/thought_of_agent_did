@@ -61,16 +61,16 @@
     anp_framework (框架层)
   </text>
   <text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
-    装饰器模式 - 快速绑定用户Agent代码到DID User
+    Lite版 快速绑定API/Agent到Anp网络 开源wrapper / Pro版mcp/a2a长期支持wrapper
   </text>
   <text x="400" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
-    统一暴露ANP格式API
+    统一发布为ANP网络Interface  并支持二次封装为mcp tool
   </text>
-  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#fff3cd">
-    @capability, @mcp_tool, @expose_api 装饰器系统
+  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#fff3cd">
+    @class_agent, @class_api, @agent_api 装饰器 支持wrap mcp/a2a资源
   </text>
-  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fff3cd">
-    License: Apache 2.0
+  <text x="400" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#fff3cd">
+    License: Apache 2.0 + AGPL 3.0
   </text>
   
   <!-- 中层：anp_server -->
@@ -79,7 +79,7 @@
     anp_server (服务层)
   </text>
   <text x="400" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
-    DID用户多域名多租户管理
+    lite版 DID用户身份与API网关 plus版 多域名多租户管理和托管与代理服务
   </text>
   <text x="400" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">
     路由管理 + 认证中间件
@@ -87,8 +87,8 @@
   <text x="400" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#d4edda">
     RouteManager, DIDFormatManager, ConfigManager
   </text>
-  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d4edda">
-    License: AGPL 3.0
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#d4edda">
+    License: Apache 2.0 + AGPL 3.0
   </text>
   
   <!-- 底层：anp_sdk -->
@@ -105,7 +105,7 @@
   <text x="400" y="635" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#cce5ff">
     Core Layer: 基础服务, Framework Layer: 高级功能
   </text>
-  <text x="400" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cce5ff">
+  <text x="400" y="655" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#cce5ff">
     License: Apache 2.0
   </text>
   
